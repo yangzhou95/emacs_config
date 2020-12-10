@@ -1,0 +1,25 @@
+
+;; ----- smex-history -----
+(
+ load-theme
+ load-file
+ eval-buffer
+ find-function-on-key
+ org-mode
+ shell
+ list-packages
+)
+
+;; ----- smex-data -----
+(
+ (LaTeX-mode . 1)
+ (list-packages . 2)
+ (customize-group . 2)
+ (dired . 1)
+ (shell . 3)
+ (load-theme . 4)
+ (load-file . 4)
+ (eval-buffer . 3)
+ (org-mode . 1)
+ (find-function-on-key . 1)
+)
