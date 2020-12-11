@@ -1,0 +1,10 @@
+(setq ns-pop-up-frames nil)
+(set-keyboard-coding-system nil)
+(setq ns-alternate-modifier 'meta)
+(setq ns-right-alternate-modifier 'none)
+
+;; after copy Ctrl+c in Linux X11, you can paste by `yank' in emacs
+(setq x-select-enable-clipboard t)
+
+;; after mouse selection in X11, you can paste by `yank' in emacs
+(setq x-select-enable-primary t)
