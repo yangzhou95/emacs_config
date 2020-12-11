@@ -1,0 +1,5 @@
+- init-packages.el: packages management
+- init-ui.el: themes, visualization, highlights
+- init-beter-defaults.el:improvement of buildins
+- init-keybindings.el: keybindings
+- custom.el: customized config

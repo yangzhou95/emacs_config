@@ -1,25 +1,30 @@
 
 ;; ----- smex-history -----
 (
+ customize-group
+ popwin-mode
+ info
  load-theme
- load-file
- eval-buffer
- find-function-on-key
- org-mode
- shell
- list-packages
+ package-autoremove
+ nodejs-repl-send-line
+ nodejs-repl
 )
 
 ;; ----- smex-data -----
 (
  (LaTeX-mode . 1)
  (list-packages . 2)
- (customize-group . 2)
+ (customize-group . 3)
  (dired . 1)
  (shell . 3)
- (load-theme . 4)
+ (load-theme . 5)
  (load-file . 4)
  (eval-buffer . 3)
  (org-mode . 1)
  (find-function-on-key . 1)
+ (nodejs-repl . 1)
+ (nodejs-repl-send-line . 1)
+ (info . 3)
+ (package-autoremove . 2)
+ (popwin-mode . 2)
 )
