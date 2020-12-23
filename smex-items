@@ -1,21 +1,21 @@
 
 ;; ----- smex-history -----
 (
- customize-group
- popwin-mode
- info
- load-theme
- package-autoremove
- nodejs-repl-send-line
- nodejs-repl
+ counsel-git
+ image-mode
+ linum-mode
+ list-packages
+ dired
+ package-list-packages
+ flyspell-mode
 )
 
 ;; ----- smex-data -----
 (
- (LaTeX-mode . 1)
- (list-packages . 2)
+ (LaTeX-mode . 3)
+ (list-packages . 9)
  (customize-group . 3)
- (dired . 1)
+ (dired . 4)
  (shell . 3)
  (load-theme . 5)
  (load-file . 4)
@@ -27,4 +27,17 @@
  (info . 3)
  (package-autoremove . 2)
  (popwin-mode . 2)
+ (turn-on-gnus-dired-mode . 1)
+ (outline-mode . 1)
+ (comment-region . 7)
+ (uncomment-region . 3)
+ (outline-minor-mode . 3)
+ (undo . 6)
+ (undo-only . 21)
+ (flyspell-mode . 2)
+ (flyspell-goto-next-error . 1)
+ (package-list-packages . 1)
+ (linum-mode . 2)
+ (image-mode . 7)
+ (counsel-git . 1)
 )

@@ -4,10 +4,13 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
+ '(TeX-source-correlate-method (quote synctex))
+ '(TeX-source-correlate-mode t)
+ '(TeX-source-correlate-start-server t)
  '(ansi-color-names-vector
    ["#272822" "#F92672" "#A6E22E" "#E6DB74" "#66D9EF" "#FD5FF0" "#A1EFE4" "#F8F8F2"])
  '(company-idle-delay 0.05)
- '(company-minimum-prefix-length 1)
+ '(company-minimum-prefix-length 2)
  '(compilation-message-face (quote default))
  '(custom-safe-themes
    (quote
@@ -30,7 +33,7 @@
     ("~/Documents/projects/learn_from_noisy_label/main.tex")))
  '(package-selected-packages
    (quote
-    (dracula-theme auctex-latexmk auctex smex company hungry-delete swiper counsel smartparens js2-mode nodejs-repl exec-path-from-shell monokai-theme)))
+    (company-tabnine latex-math-preview latex-preview-pane dracula-theme auctex-latexmk auctex smex company hungry-delete swiper counsel smartparens js2-mode nodejs-repl exec-path-from-shell monokai-theme)))
  '(pos-tip-background-color "#FFFACE")
  '(pos-tip-foreground-color "#272822")
  '(vc-annotate-background nil)
@@ -64,6 +67,7 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  )
+
 
 
 

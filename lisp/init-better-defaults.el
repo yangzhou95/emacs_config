@@ -9,6 +9,11 @@
 ;; config for yes=y, no=n
 (fset 'yes-or-no-p 'y-or-n-p)
 
+;; avoid the warning: There is an existing Emacs server, named "server".xs
+(require 'server)
+(or (server-running-p)
+    (server-start))
+
 (setq make-backup-files nil)
 (setq auto-save-default nil)
 
@@ -23,6 +28,7 @@
 
 
 ;;global-auto-revert-mode is an interactive autoloaded lisp function
+;; when init file is modified by other sources, it autoload the modifications
 (global-auto-revert-mode t)
 
 ;; turn off the ring bell for error
@@ -33,7 +39,5 @@
 (define-abbrev-table 'global-abbrev-table '(
 					    ("zy" "Zhou Yang")
 					    ))
-
-
 
 (provide 'init-better-defaults)

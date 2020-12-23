@@ -17,6 +17,8 @@
 (global-set-key (kbd "<f1> f") 'counsel-describe-function)
 (global-set-key (kbd "<f1> v") 'counsel-describe-variable)
 
+;;keybindings for hippie
+(global-set-key (kbd "s-/") 'hippie-expand)
 
 (global-set-key (kbd "M-x") 'smex)
 (global-set-key (kbd "M-X") 'smex-major-mode-commands)
