@@ -28,6 +28,12 @@
 ;; Find file in the current Git repository.
 (global-set-key (kbd "C-c p f") 'counsel-git)
 
+;; indent region or buffer
+(global-set-key (kbd "C-M-\\") 'indent-region-or-buffer)
+
+
+;;hippi expand
+(global-set-key (kbd "s-/") 'hippie-expand)
 
 
 (provide 'init-keybindings)

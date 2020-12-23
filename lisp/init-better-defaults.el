@@ -40,4 +40,18 @@
 					    ("zy" "Zhou Yang")
 					    ))
 
+;; indent region or buffer
+(defun indent-buffer ()
+  "Indent current buffer"
+  (interactive)
+  (indent-region (point-min) (point-max)))
+(defun indent-region-or-buffer()
+  (interactive)
+  (save-excursion
+    (if (region-active-p);; p:predicate
+	(progn
+	  (indent-region (region-beginning) (region-end))
+	  (message "Indented buffer.")))))
+
+
 (provide 'init-better-defaults)

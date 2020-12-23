@@ -1,13 +1,13 @@
 
 ;; ----- smex-history -----
 (
+ js2-mode
  counsel-git
  image-mode
  linum-mode
  list-packages
  dired
  package-list-packages
- flyspell-mode
 )
 
 ;; ----- smex-data -----
@@ -40,4 +40,5 @@
  (linum-mode . 2)
  (image-mode . 7)
  (counsel-git . 1)
+ (js2-mode . 1)
 )
