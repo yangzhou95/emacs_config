@@ -1,0 +1,6 @@
+* configs for emacs by using org file
+
+
+#+BEGIN_SRC emacs-lisp
+
+#+END_SRC

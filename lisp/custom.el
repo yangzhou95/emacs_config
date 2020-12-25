@@ -28,12 +28,11 @@
      ("#F309DF" . 85)
      ("#3C3D37" . 100))))
  '(magit-diff-use-overlays nil)
- '(org-agenda-files
-   (quote
-    ("~/Documents/projects/learn_from_noisy_label/main.tex")))
+ '(org-agenda-files (quote ("~/org/")))
  '(package-selected-packages
    (quote
     (company-tabnine latex-math-preview latex-preview-pane dracula-theme auctex-latexmk auctex smex company hungry-delete swiper counsel smartparens js2-mode nodejs-repl exec-path-from-shell monokai-theme)))
+ '(popwin:popup-window-width 0.25)
  '(pos-tip-background-color "#FFFACE")
  '(pos-tip-foreground-color "#272822")
  '(vc-annotate-background nil)
@@ -66,7 +65,7 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- )
+ '(iedit-occurrence ((t (:inherit region)))))
 
 
 

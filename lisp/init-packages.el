@@ -38,6 +38,13 @@
 		auctex-latexmk
 		;;windows management
 		popwin
+		reveal-in-osx-finder
+		web-mode ;; for html
+		expand-region
+		iedit
+		htmlize ;; org file convert to html
+		org-pomodoro ;; gtd
+		helm-ag;; fast search
 		;; solarized-theme
 		) "my default packages")
 ;;Store here packages installed explicitly by user.
@@ -69,6 +76,9 @@
 
 ;;config for the smartparens 
 (require 'smartparens-config);;enable default config
+(smartparens-global-mode t)
+;; in emacs lisp mode, when typing "'",it won't add another ","
+(sp-local-pair 'emacs-list-mode "'" nil :actions nil)
 (add-hook 'emacs-lisp-mode-hook 'smartparens-mode)
 
 
@@ -124,7 +134,8 @@
 ;;set JS IDE
 (setq auto-mode-alist ;; auto-mode-alist is used to associate major mode with different types of file matching by regular expression
       (append
-       '(("\\.js\\'" . js2-mode));; use js2-mode to replate the default major mode
+       '(("\\.js\\'" . js2-mode);; use js2-mode to replate the default major mode
+	 ("\\.html\\'" . web-mode)) ;; use web-mode to open html
        auto-mode-alist))
 ;;config for js requiring nodejs and outpu error messages on Macq
 (when (memq window-system '(mac ns))
@@ -145,7 +156,9 @@
 (add-hook 'js-mode-hook #'smartparens-mode)
 
 
-
+;; porodoro for gtd
+(require 'org-pomodoro)
 
 
 (provide 'init-packages)
+

@@ -1,32 +1,32 @@
 
 ;; ----- smex-history -----
 (
- js2-mode
- counsel-git
- image-mode
- linum-mode
- list-packages
- dired
- package-list-packages
+ helm-ag
+ helm-do-ag-project-root
+ helm-M-x
+ reveal-in-osx-finder
+ org-mode
+ calendar-mode
+ org-sort
 )
 
 ;; ----- smex-data -----
 (
  (LaTeX-mode . 3)
- (list-packages . 9)
- (customize-group . 3)
+ (list-packages . 11)
+ (customize-group . 12)
  (dired . 4)
  (shell . 3)
  (load-theme . 5)
  (load-file . 4)
  (eval-buffer . 3)
- (org-mode . 1)
+ (org-mode . 5)
  (find-function-on-key . 1)
  (nodejs-repl . 1)
  (nodejs-repl-send-line . 1)
  (info . 3)
  (package-autoremove . 2)
- (popwin-mode . 2)
+ (popwin-mode . 4)
  (turn-on-gnus-dired-mode . 1)
  (outline-mode . 1)
  (comment-region . 7)
@@ -39,6 +39,18 @@
  (package-list-packages . 1)
  (linum-mode . 2)
  (image-mode . 7)
- (counsel-git . 1)
+ (counsel-git . 2)
  (js2-mode . 1)
+ (web-mode . 1)
+ (occur-mode . 1)
+ (iedit-mode . 1)
+ (org-capture . 2)
+ (calendar-mode . 4)
+ (org-pomodoro . 6)
+ (zhou/retrieve-chrome-current-tab-url . 5)
+ (org-sort . 1)
+ (reveal-in-osx-finder . 1)
+ (helm-ag . 2)
+ (helm-M-x . 1)
+ (helm-do-ag-project-root . 2)
 )

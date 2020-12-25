@@ -1,3 +1,4 @@
+
 ;; keybiding configs
 ;; ---------customized keybindings start with C-c ----------
 
@@ -33,7 +34,28 @@
 
 
 ;;hippi expand
-(global-set-key (kbd "s-/") 'hippie-expand)
+(global-set-key (kbd "s-/") 'hippie-expand);; s stands for command on Mac os
+
+;; dired-mode: disable multi dired buffer
+;; dired-reuse current buffer by pressign 'a'
+(require 'dired);; since the define-key must be under the dire-mode, we should require it first
+(define-key dired-mode-map (kbd "RET") 'dired-find-alternate-file)
+(with-eval-after-load 'dired ;; avoid using (require 'dired) and (define-key ....) to accelerate init
+  (define-key dired-mode-map (kbd "RET") 'dired-find-alternate-file))
+
+(global-set-key (kbd "C-=") 'er/expand-region)
+(global-set-key (kbd "C-;") 'iedit-mode)
+
+;; r aka remember: keybindings for org-capture
+(global-set-key (kbd "C-c r") 'org-capture)
+
+
+;; change the M-n/p for selection
+(with-eval-after-load 'company
+  (define-key company-active-map (kbd "M-n") nil)
+  (define-key company-active-map (kbd "M-p") nil)
+  (define-key company-active-map (kbd "C-n") #'company-select-next)
+  (define-key company-active-map (kbd "C-p") #'company-select-previous))
 
 
 (provide 'init-keybindings)
