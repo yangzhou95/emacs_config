@@ -1,25 +1,25 @@
 
 ;; ----- smex-history -----
 (
- helm-ag
- helm-do-ag-project-root
- helm-M-x
- reveal-in-osx-finder
- org-mode
- calendar-mode
- org-sort
+ customize-group
+ list-packages
+ eval-buffer
+ comment-region
+ evil-leader-mode
+ org-cut-special
+ evil-mode
 )
 
 ;; ----- smex-data -----
 (
- (LaTeX-mode . 3)
- (list-packages . 11)
- (customize-group . 12)
+ (LaTeX-mode . 4)
+ (list-packages . 24)
+ (customize-group . 16)
  (dired . 4)
  (shell . 3)
  (load-theme . 5)
  (load-file . 4)
- (eval-buffer . 3)
+ (eval-buffer . 8)
  (org-mode . 5)
  (find-function-on-key . 1)
  (nodejs-repl . 1)
@@ -29,7 +29,7 @@
  (popwin-mode . 4)
  (turn-on-gnus-dired-mode . 1)
  (outline-mode . 1)
- (comment-region . 7)
+ (comment-region . 9)
  (uncomment-region . 3)
  (outline-minor-mode . 3)
  (undo . 6)
@@ -52,5 +52,14 @@
  (reveal-in-osx-finder . 1)
  (helm-ag . 2)
  (helm-M-x . 1)
- (helm-do-ag-project-root . 2)
+ (helm-do-ag-project-root . 5)
+ (helm-do-ag . 2)
+ (helm-ag-project-root . 1)
+ (yas-minor-mode . 1)
+ (evil-mode . 2)
+ (turn-off-evil-mode . 1)
+ (evil-emacs-state . 1)
+ (org-cut-special . 1)
+ (evil-normal-state . 1)
+ (evil-leader-mode . 2)
 )

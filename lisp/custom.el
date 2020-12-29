@@ -15,6 +15,7 @@
  '(custom-safe-themes
    (quote
     ("8b58ef2d23b6d164988a607ee153fd2fa35ee33efc394281b1028c2797ddeebb" "2dff5f0b44a9e6c8644b2159414af72261e38686072e063aa66ee98a2faecf0e" default)))
+ '(evil-leader/leader "SPC")
  '(fci-rule-color "#3C3D37")
  '(highlight-changes-colors (quote ("#FD5FF0" "#AE81FF")))
  '(highlight-tail-colors
@@ -31,7 +32,7 @@
  '(org-agenda-files (quote ("~/org/")))
  '(package-selected-packages
    (quote
-    (company-tabnine latex-math-preview latex-preview-pane dracula-theme auctex-latexmk auctex smex company hungry-delete swiper counsel smartparens js2-mode nodejs-repl exec-path-from-shell monokai-theme)))
+    (powerline-evil evil-nerd-commenter powerline commander cask which-key evil-surround window-numbering evil-leader evil company-tabnine latex-math-preview latex-preview-pane dracula-theme auctex-latexmk auctex smex company hungry-delete swiper counsel smartparens js2-mode nodejs-repl exec-path-from-shell monokai-theme)))
  '(popwin:popup-window-width 0.25)
  '(pos-tip-background-color "#FFFACE")
  '(pos-tip-foreground-color "#272822")

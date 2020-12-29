@@ -45,7 +45,16 @@
 		htmlize ;; org file convert to html
 		org-pomodoro ;; gtd
 		helm-ag;; fast search
-		;; solarized-theme
+		flycheck ;; syntax checking
+		yasnippet;; code snippets
+		auto-yasnippet ;; code snippets
+		evil ;; evil mode
+		evil-leader;;
+		window-numbering ;; use M-1(9) to control windows
+		;;powerline-evil ;; statusline
+		evil-surround;;
+		evil-nerd-commenter;;comment code
+		which-key
 		) "my default packages")
 ;;Store here packages installed explicitly by user.
 (setq package-selected-packages my/packages)
@@ -53,7 +62,7 @@
 (defun my/packages-installed-p ()
   ;; loop for is from (require 'cl)
      (loop for pkg in my/packages
-	   when (not (package-installed-p pkg)) do (return nil)
+	   when (not (package-installed-p pkg)) do (returnnil)
 	   finally (return t)))
 
  (unless (my/packages-installed-p)
@@ -64,7 +73,7 @@
 	 (package-install pkg))))
 
 ;; Find Executable Path on OS X
- (when (memq window-system '(mac ns))
+(when (memq window-system '(mac ns))
    (exec-path-from-shell-initialize))
 
 ;; add a theme to my/packages-it will install
@@ -156,9 +165,74 @@
 (add-hook 'js-mode-hook #'smartparens-mode)
 
 
+
 ;; porodoro for gtd
 (require 'org-pomodoro)
 
 
-(provide 'init-packages)
+;; flycheck
+;;(global-flycheck-mode)
+(add-hook 'js2-mode 'flycheck-mode)
 
+;; configs for snippets
+(require 'yasnippet)
+(yas-reload-all)
+(add-hook 'prog-mode-hook #'yas-minor-mode) ;; only for prog-mode
+
+
+;; activate gloabal-evil-leader-mode before activating evil-mode; otherwise, evil-mode won't work on severl init buffers
+;; such as *scratch*, *Message*
+(global-evil-leader-mode)
+;; configs for evil mode
+(evil-mode 1)
+;; empty the key-mapping in the "insert state map", enable the Fallback to the emacs states
+;; such that the keybindings in the Emacs won't be covered by the "evil insert minor mode state"
+(setcdr evil-insert-state-map nil)
+(define-key evil-insert-state-map [escape] 'evil-normal-state)
+
+
+;;window-numbering mode
+(window-numbering-mode 1)
+
+;; evil-surround
+(require 'evil-surround)
+(global-evil-surround-mode 1)
+
+;; powerline is a statusline plugin for vim.
+;;(require 'powerline)
+;;(powerline-default-theme)
+;;(powerline-center-theme)
+;; (require 'powerline-evil)
+
+
+;; Enable window-numbering-mode and use M-1 through M-0 to navigate.
+(setq window-numbering-assign-func
+      (lambda () (when (equal (buffer-name) "*Calculator*") 9)))
+
+
+
+;; configs for which-key
+(which-key-mode 1)
+(which-key-setup-side-window-right) 
+
+
+(add-hook 'occur-mode-hook
+	  (lambda()
+	    (evil-add-hjkl-bindings occur-mode-map 'emacs
+	      (kbd "/") 'evil-search-forward
+	      (kbd "n") 'evil-search-next
+	      (kbd "N") 'evil-search-previous
+	      (kbd "C-d") 'evil-scroll-down
+	      ) ))
+
+
+
+;; use emacs as the default mode 
+(dolist (mode '(ag-mode
+		flycheck-error-list-mode
+		occur-mode
+		git-rebase-mode))
+  (add-to-list 'evil-emacs-state-modes mode))
+
+;;
+(provide 'init-packages)

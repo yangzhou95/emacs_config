@@ -1,4 +1,3 @@
-
 ;; keybiding configs
 ;; ---------customized keybindings start with C-c ----------
 
@@ -27,7 +26,7 @@
 (global-set-key (kbd "C-c C-c M-x") 'execute-extended-command)
 
 ;; Find file in the current Git repository.
-(global-set-key (kbd "C-c p f") 'counsel-git)
+;; (global-set-key (kbd "C-c p f") 'counsel-git)
 
 ;; indent region or buffer
 (global-set-key (kbd "C-M-\\") 'indent-region-or-buffer)
@@ -58,4 +57,51 @@
   (define-key company-active-map (kbd "C-p") #'company-select-previous))
 
 
+;;helm-ag: search
+;;(global-set-key (kbd "C-c p s") 'helm-do-ag-project-root)
+
+
+(global-set-key (kbd "C-z") 'evil-emacs-state)
+
+;;evil keybiding
+(evil-leader/set-key
+  "ff" 'find-file
+  "fr" 'recentf-open-files
+  "bb" 'switch-to-buffer
+  "bk" 'kill-buffer
+  "ps" 'helm-do-ag-project-root
+  "0"  'select-window-0
+  "1"  'select-window-1
+  "2"  'select-window-2
+  "3"  'select-window-3
+  "w/" 'split-window-right
+  "w-" 'split-window-below
+  ":"  'counsel-M-x
+  "wm" 'delete-other-windows
+  "qq" 'save-buffers-kill-terminal
+  ) 
+
+
+
+;; enable the evil commenter in both evil-mode and non-evil mode
+(evilnc-default-hotkeys)
+(define-key evil-normal-state-map (kbd ",/") 'evilnc-comment-or-uncomment-lines)
+(define-key evil-visual-state-map (kbd ",/") 'evilnc-comment-or-uncomment-lines)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 (provide 'init-keybindings)
+
+
+

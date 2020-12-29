@@ -17,6 +17,8 @@
 (setq make-backup-files nil)
 (setq auto-save-default nil)
 
+;;disable scrollbar
+(scroll-bar-mode -1)
 ;; enable recent files in the buffers
 (require 'recentf)
 (recentf-mode 1)
@@ -53,7 +55,7 @@
   (indent-region (point-min) (point-max)))
 (defun indent-region-or-buffer()
   (interactive)
-  (save-excursion
+  (save-excursioni
     (if (region-active-p);; p:predicate
 	(progn
 	  (indent-region (region-beginning) (region-end))
@@ -145,10 +147,6 @@
                       "copy theResult to the end of links\n"
                       "return links as string\n"))))
         (format "%s" (s-chop-suffix "\"" (s-chop-prefix "\"" result)))))
-
-
-
-
 
 
 (provide 'init-better-defaults)
